@@ -109,7 +109,7 @@ footer ul {
     display: grid;
     grid-template-columns: 250px 2.2fr 1fr;
    
-    padding: 20px 0 0 0;
+    padding: 0 25vw 0 0;
     margin: 0;
     background-color: var(--myLightGray);
     height: 100vh;
@@ -130,6 +130,12 @@ footer ul {
     padding: 0;
 }
 
+.about-me__para1 {
+    padding: 20px 0 0 0;
+    margin: 0;
+    background-color: var(--myLightGray);
+}
+
 .para1 {
     word-spacing: 0.5em;
     line-height: 2;
@@ -142,17 +148,13 @@ footer ul {
     font-weight: 700;
 }
 
-.about-me__para1 {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    padding: 20px 0 0 0;
-    margin: 0;
-    background-color: var(--myLightGray);
-}
 
 .para1__image {
     filter: brightness(130%);
-    position: relative;
+    float: right;
+    /* max-width: 100%; */
+    height: 216px;
+    width: 266px;
 }
 
 .para2, .para3, .para4, .para5, .para6 {
@@ -179,6 +181,8 @@ footer ul {
 }
 .bottom-logo {
     align-self: flex-end;
+    padding-left: 10vw;
+    transform: translateY(5px);
 }
 
 .right-foot {
