@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@200...900"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@200..900"
     />
 
     <title>About Me</title>
@@ -24,7 +24,13 @@
               <a href="../src/about.html" class="header__menu-link">ABOUT</a>
             </li>
             <li class="header__menu-item">
-              <a href="#" class="header__menu-link">WORK</a>
+              <a href="#" class="header__menu-link work-dropdown">WORK</a>
+              <div class="dropdown-menu hidden">
+                <a href="#" class="header__menu-link dropdown-item">SERVICES</a>
+                <a href="#" class="header__menu-link dropdown-item"
+                  >PORTFOLIO</a
+                >
+              </div>
             </li>
             <li class="header__menu-item">
               <a href="#" class="header__menu-link">CONTACT</a>
@@ -161,5 +167,6 @@
         </footer>
       </div>
     </div>
+    <script src="../dist/bundle.js"></script>
   </body>
 </html>

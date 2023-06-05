@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../src/style.css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@200...900"
-    />
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@200..900"
+    >
 
     <title>Document</title>
   </head>
@@ -23,8 +23,12 @@
             <li class="header__menu-item">
               <a href="../src/about.html" class="header__menu-link">ABOUT</a>
             </li>
-            <li class="header__menu-item">
-              <a href="#" class="header__menu-link">WORK</a>
+            <li class="header__menu-item dropdown-menu-container">
+              <a href="#" class="header__menu-link work-dropdown">WORK</a>
+              <div class="dropdown-menu hidden">
+                <a href="#" class="header__menu-link dropdown-item">SERVICES</a>
+                <a href="#" class="header__menu-link dropdown-item">PORTFOLIO</a>
+              </div>
             </li>
             <li class="header__menu-item">
               <a href="#" class="header__menu-link">CONTACT</a>
@@ -118,5 +122,6 @@
         </footer>
       </div>
     </div>
+    <script src="../dist/bundle.js"></script>
   </body>
 </html>
