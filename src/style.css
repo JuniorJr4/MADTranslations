@@ -285,3 +285,65 @@ footer ul {
   display: flex;
   flex-direction: column;
 }
+
+/* Image SLider Styles */
+
+img {
+  width: 302px;
+  height: 329px;
+  object-fit: cover;
+}
+
+.slider {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.slider ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: all 0.5s ease-in;
+  width: 300%;
+}
+
+.slider li {
+  float: left;
+  width: 33.333%;
+}
+.slider-buttons {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.slider-buttons button {
+  margin: 0 5px;
+  padding: 10px;
+  border: none;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+.slider-dots {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  margin-top: 10px;
+}
+
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #bea0a0;
+  cursor: pointer;
+}
+
+.slider-dot.active {
+  background-color: #000;
+}
