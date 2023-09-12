@@ -3,6 +3,8 @@ import "../src/style.css";
 function dropdownMenu() {
   const workDropdown = document.querySelector(".work-dropdown");
   const dropdownMenu = document.querySelector(".dropdown-menu");
+  const prevButton = document.querySelector(".prev");
+  const nextButton = document.querySelector(".next");
   let timeoutId;
   //const dropdownItems = document.querySelectorAll(".dropdown-item"); //Needed?
   function dropdownMenuMouseover() {
@@ -28,8 +30,7 @@ function dropdownMenu() {
   //   workDropdown.addEventListener("mouseout", dropdownMenuClickOut);
   //   dropdownMenu.addEventListener("mouseout", dropdownMenuClickOut);
 }
-
-export default function imageSlider() {
+function imageSlider() {
   const slider = document.querySelector(".slider");
   const prevButton = document.querySelector(".prev");
   const nextButton = document.querySelector(".next");
@@ -55,12 +56,14 @@ export default function imageSlider() {
   }
 
   function goToNextSlide() {
+    console.log('dd');
     // go to the next slide (loop back to the start if at the end)
     if (currentIndex === slides.length - 1) {
       goToSlide(0);
     } else {
       goToSlide(currentIndex + 1);
     }
+    console.log('dd');
   }
 
   function goToPrevSlide() {
@@ -103,6 +106,7 @@ export default function imageSlider() {
   // add click event listeners to the buttons
   prevButton.addEventListener("click", goToPrevSlide);
   nextButton.addEventListener("click", goToNextSlide);
+  console.log(currentIndex);
 }
 
 export default function pageLoader() {
