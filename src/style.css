@@ -23,6 +23,11 @@ p {
   margin: 0;
 }
 
+li {
+  list-style:   none;
+  text-decoration: none;
+}
+
 footer {
   height: 80px;
   background-color: var(--myColor);
@@ -164,6 +169,7 @@ footer ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: var(--myLightGray);
 }
 
 .content__title-subtext-portfolio{
@@ -210,7 +216,8 @@ footer ul {
 .para3,
 .para4,
 .para5,
-.para6 {
+.para6,
+.para-blog {
   word-spacing: 0.2em;
   line-height: 1.25;
 }
@@ -371,4 +378,31 @@ div.slider img {
 
 .slider-dot.active {
   background-color: #000;
+}
+/* Blog.html style */
+/* Toggle blog Article Content */
+.article-content {
+  display: none;
+}
+
+.article-expanded {
+  display: block;
+  
+  
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0;
+  margin: 0;
+  
+  height: 100vh;
+}
+
+.para-blog {
+  color: var(--myGray);
+  width: 75%;
 }
