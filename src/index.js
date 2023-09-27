@@ -123,11 +123,11 @@ function showArticleContent() {
     "/home/junior4/repos/MADTranslations/src/blog.html"
   ) {
     console.log("y");
-    const articleLinks = document.querySelectorAll(".article-link");
+    const articleTitles = document.querySelectorAll(".article-title");
 
-    articleLinks.forEach((link) => {
-      const article = link.nextElementSibling;
-      const plusSign = link.previousElementSibling;
+    articleTitles.forEach((title) => {
+      const plusSign = title.firstElementChild;
+      const article = title.nextElementSibling;
       console.log(article, plusSign);
 
       plusSign.addEventListener("click", (e) => {
