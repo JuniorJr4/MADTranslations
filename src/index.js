@@ -116,6 +116,7 @@ function imageSlider() {
   }
 }
 
+//Toggle article content
 function showArticleContent() {
   // First ensure user is on blog page
   if (
@@ -132,7 +133,52 @@ function showArticleContent() {
 
       plusSign.addEventListener("click", (e) => {
         article.classList.toggle("article-expanded");
+        plusSign
       });
+    });
+  }
+}
+
+function commentHandler() {
+  const commentForm = document.querySelector("#comment-form");
+  const commentSection = document.querySelector(".comment-section");
+  const commentsList = [];
+
+  commentForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    
+    const name = e.target.name.value;;
+    const comment = e.target.comment.value;
+    const email = e.target.email.value;
+
+    commentsList.push({ name, email, comment  });
+
+    e.target.reset();
+    console.log(commentsList);
+    displayComments();
+  });
+
+  function displayComments() {
+    commentSection.textContent = "";
+
+    commentsList.forEach((comment) => {
+      const commentDiv = document.createElement("div");
+      commentDiv.classList.add("comment");
+
+      const commentName = document.createElement("h3");
+      commentName.textContent = comment.name;
+
+      const commentEmail = document.createElement("p");
+      commentEmail.textContent = comment.email;
+
+      const commentComment = document.createElement("p");
+      commentComment.textContent = comment.comment;
+
+      commentDiv.appendChild(commentName);
+      commentDiv.appendChild(commentEmail);
+      commentDiv.appendChild(commentComment);
+
+      commentSection.appendChild(commentDiv);
     });
   }
 }
@@ -141,5 +187,6 @@ export default function pageLoader() {
   dropdownMenu();
   imageSlider();
   showArticleContent();
+  commentHandler();
 }
 pageLoader();

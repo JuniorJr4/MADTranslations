@@ -405,7 +405,6 @@ div.slider img {
 .article-title,
 .article-content,
 .para-blog {
-
   width: 50vw;
 }
 
@@ -416,12 +415,12 @@ div.slider img {
   padding: 0;
   margin: 0;
   width: auto;
-  height: 100vh;
+  height: auto;
 }
 
 .article-title {
   display: flex;
-  align-items: center;  
+  align-items: center;
 }
 .expand {
   font-size: 3em;
@@ -440,4 +439,21 @@ div.slider img {
 .para-blog {
   color: var(--myGray);
   width: 50vw;
+}
+
+.article-link {
+  text-decoration: underline;
+}
+
+
+/* Comment Section */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  background-color: var(--myLightGray);
+  
 }
